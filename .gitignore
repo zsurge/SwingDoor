@@ -1,0 +1,10 @@
+#忽略SI目录
+/SwingDoorApp/SwingDoorApp.si4project
+
+#忽略BIN下所有文件
+/SwingDoorApp/6Bin/*
+
+#忽略MDK_PRO下所有文件
+/SwingDoorApp/MDK_PRO/*
+!/SwingDoorApp/MDK_PRO/SwingDoorApp.uvprojx
+!/SwingDoorApp/MDK_PRO/AutoRenameByVersion.exe
