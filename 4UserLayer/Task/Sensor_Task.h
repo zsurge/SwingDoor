@@ -43,7 +43,7 @@ extern TaskHandle_t xHandleTaskSensor;
  *----------------------------------------------*/
 
 
-void CreateSensorTask(void *pvParameters);
+void CreateSensorTask(void);
 
 
 

@@ -43,7 +43,7 @@ extern TaskHandle_t xHandleTaskHandShake;      //Œ’ ÷
  *----------------------------------------------*/
 
 
-void CreateHandShakeTask(void *pvParameters);
+void CreateHandShakeTask(void);
 
 
 

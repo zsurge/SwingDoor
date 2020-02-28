@@ -43,12 +43,12 @@
 ..\6bin\ini.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h
 ..\6bin\ini.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 ..\6bin\ini.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
-..\6bin\ini.o: ..\4UserLayer\tool.h
+..\6bin\ini.o: ..\4UserLayer\Apps\tool.h
 ..\6bin\ini.o: ..\3MiddleLayer\easyflash\inc\easyflash.h
 ..\6bin\ini.o: ..\3MiddleLayer\easyflash\inc\ef_cfg.h
 ..\6bin\ini.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-..\6bin\ini.o: ..\4UserLayer\errorcode.h
-..\6bin\ini.o: ..\4UserLayer\Devinfo.h
+..\6bin\ini.o: ..\4UserLayer\Apps\errorcode.h
+..\6bin\ini.o: ..\4UserLayer\Apps\Devinfo.h
 ..\6bin\ini.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\6bin\ini.o: ..\2LowLayer\USART\bsp_uart_fifo.h
 ..\6bin\ini.o: ..\5FreeRTOS\include\FreeRTOS.h

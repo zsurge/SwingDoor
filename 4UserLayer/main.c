@@ -25,10 +25,25 @@
 /*----------------------------------------------*
  * 宏定义                                       *
  *----------------------------------------------*/
+#define APPCREATE_TASK_PRIO		(tskIDLE_PRIORITY)
+#define APPCREATE_STK_SIZE 		(configMINIMAL_STACK_SIZE*16)
+    
+
 
 /*----------------------------------------------*
- * 内部函数原型说明                             *
+ * 常量定义                                     *
  *----------------------------------------------*/
+const char *AppCreateTaskName = "vAppCreateTask";      
+
+/*----------------------------------------------*
+ * 模块级变量                                   *
+ *----------------------------------------------*/
+static TaskHandle_t xHandleTaskAppCreate = NULL;     
+
+SemaphoreHandle_t gxMutex = NULL;
+EventGroupHandle_t xCreatedEventGroup = NULL;
+QueueHandle_t gxMotorCtrlQueue = NULL; 
+
 
 
 static void AppTaskCreate(void);
@@ -40,16 +55,22 @@ static void MotorInit(void);
 int main(void)
 {   
     //硬件初始化
-    bsp_Init();  
+    bsp_Init();
 
-	/* 创建任务通信机制 */
-	AppObjCreate();
-
+    //创建任务通信机制  
+    AppObjCreate();
+    
 	//电机初始化(关门)
     MotorInit();
 
-	/* 创建任务 */
-	AppTaskCreate();
+    //创建AppTaskCreate任务
+    xTaskCreate((TaskFunction_t )AppTaskCreate,     
+                (const char*    )AppCreateTaskName,   
+                (uint16_t       )APPCREATE_STK_SIZE, 
+                (void*          )NULL,
+                (UBaseType_t    )APPCREATE_TASK_PRIO,
+                (TaskHandle_t*  )&xHandleTaskAppCreate);   
+
     
     /* 启动调度，开始执行任务 */
     vTaskStartScheduler();
@@ -66,7 +87,38 @@ int main(void)
 */
 static void AppTaskCreate (void)
 {
+    //进入临界区
+    taskENTER_CRITICAL(); 
+    
+    //握手
+    CreateHandShakeTask();
 
+    //与上位机通讯处理
+    CreateMsgParseTask();
+    
+    //电机控制处理
+    CreateMotorCtrlTask();
+
+    //方向指示灯
+    CreateLedTask();
+
+    //读卡器数据收集
+    CreateReaderTask();
+
+    //条码扫描数据处理
+    CreateBarCodeTask();
+
+    //红外传感器数据上送
+    CreateSensorTask();
+
+    //看门狗
+    CreateWatchDogTask();
+
+    //删除本身
+    vTaskDelete(xHandleTaskAppCreate); //删除AppTaskCreate任务
+
+    //退出临界区
+    taskEXIT_CRITICAL();            
 
 }
 
@@ -97,91 +149,19 @@ static void AppObjCreate (void)
     {
         /* 没有创建成功，用户可以在这里加入创建失败的处理机制 */
         AppPrintf("创建互斥信号量失败\r\n");
-    }   
+    }     
     
-    
-	/* 创建互斥信号量 */
-//    gMutex_Motor = xSemaphoreCreateMutex();
-//	
-//	if(gMutex_Motor == NULL)
-//    {
-//        /* 没有创建成功，用户可以在这里加入创建失败的处理机制 */
-//        AppPrintf("创建互斥信号量失败\r\n");
-//    }      
-
-    #ifdef USEQUEUE
+  
     /* 创建消息队列 */
-    xTransQueue = xQueueCreate((UBaseType_t ) QUEUE_LEN,/* 消息队列的长度 */
-                              (UBaseType_t ) sizeof(QUEUE_TO_HOST_T *));/* 消息的大小 */
-    if(xTransQueue == NULL)
+    gxMotorCtrlQueue = xQueueCreate((UBaseType_t ) MOTORCTRL_QUEUE_LEN,/* 消息队列的长度 */
+                              (UBaseType_t ) sizeof(MOTORCTRL_QUEUE_T *));/* 消息的大小 */
+    if(gxMotorCtrlQueue == NULL)
     {
         AppPrintf("创建xTransQueue消息队列失败!\r\n");
     }	
-    #endif
+
 
 }
-
-
-//motor to host 任务函数
-void vTaskMotorToHost(void *pvParameters)
-{     
-    uint8_t buf[8] = {0};
-    uint16_t readLen = 0;
-    uint16_t iCRC = 0;
-    uint8_t crcBuf[2] = {0};
-
-    #ifdef USEQUEUE
-    QUEUE_TO_HOST_T *ptMotorToHost;  
-    ptMotorToHost = &gQueueToHost;
-    #endif
-    
-    while (1)
-    {   
-        readLen = RS485_Recv(COM4,buf,8); 
-
-        if(readLen == 7 || readLen == 8)
-        {            
-            iCRC = CRC16_Modbus(buf, readLen-2);  
-
-            crcBuf[0] = iCRC >> 8;
-            crcBuf[1] = iCRC & 0xff;  
-
-            if(crcBuf[1] == buf[readLen-2] && crcBuf[0] == buf[readLen-1])
-            { 
-                #ifdef USEQUEUE
-                ptMotorToHost->cmd = CONTROLMOTOR;
-                memcpy(ptMotorToHost->data,buf,readLen);
-
-    			/* 使用消息队列实现指针变量的传递 */
-    			if(xQueueSend(xTransQueue,              /* 消息队列句柄 */
-    						 (void *) &ptMotorToHost,   /* 发送结构体指针变量ptQueueToHost的地址 */
-    						 (TickType_t)10) != pdPASS )
-    			{
-                    DBG("向xTransQueue发送数据失败，即使等待了10个时钟节拍\r\n");                
-                } 
-                else
-                {
-//                    DBG("向xTransQueue发送数据成功\r\n");
-                      dbh("CONTROLMOTOR",(char *)buf,readLen);
-                }    
-                #endif
-
-//                dbh("RECV A",(char *)buf,readLen);
-                send_to_host(CONTROLMOTOR,buf,readLen);
-                vTaskResume(xHandleTaskQueryMotor);//重启状态查询线程
-                Motro_A = 0;
-            }            
-        }           
-
-        
-        //发送事件标志，表示任务正常运行      
-        xEventGroupSetBits(xCreatedEventGroup, TASK_BIT_1);
-        
-        vTaskDelay(100);
-    }
-
-}
-
 
 /*
 *********************************************************************************************************
@@ -203,10 +183,7 @@ static void  AppPrintf(char *format, ...)
                    (size_t      ) sizeof(buf_str),
                    (char const *) format,
                                   v_args);
-    va_end(v_args);
-
-
-    
+    va_end(v_args);    
 
 	/* 互斥信号量 */
 	xSemaphoreTake(gxMutex, portMAX_DELAY);

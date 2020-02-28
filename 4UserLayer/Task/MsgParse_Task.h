@@ -41,7 +41,7 @@ extern TaskHandle_t xHandleTaskMsgParse;      //解析上位机指令
  * 内部函数原型说明                             *
  *----------------------------------------------*/
 
-void CreateMsgParseTask(void *pvParameters);
+void CreateMsgParseTask(void);
 
 
 

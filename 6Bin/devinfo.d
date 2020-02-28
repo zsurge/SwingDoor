@@ -1,5 +1,5 @@
-..\6bin\devinfo.o: ..\4UserLayer\Devinfo.c
-..\6bin\devinfo.o: ..\4UserLayer\Devinfo.h
+..\6bin\devinfo.o: ..\4UserLayer\Apps\Devinfo.c
+..\6bin\devinfo.o: ..\4UserLayer\Apps\Devinfo.h
 ..\6bin\devinfo.o: ..\4UserLayer\stm32f4xx_conf.h
 ..\6bin\devinfo.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h
 ..\6bin\devinfo.o: ..\4UserLayer\stm32f4xx.h
@@ -35,7 +35,7 @@
 ..\6bin\devinfo.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h
 ..\6bin\devinfo.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 ..\6bin\devinfo.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
-..\6bin\devinfo.o: ..\4UserLayer\tool.h
+..\6bin\devinfo.o: ..\4UserLayer\Apps\tool.h
 ..\6bin\devinfo.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\6bin\devinfo.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\6bin\devinfo.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

@@ -21,6 +21,9 @@
  * 包含头文件                                   *
  *----------------------------------------------*/
 #include "Sensor_Task.h"
+#include "bsp_infrared.h"
+#include "comm.h"
+
 /*----------------------------------------------*
  * 宏定义                                       *
  *----------------------------------------------*/
@@ -43,13 +46,13 @@ TaskHandle_t xHandleTaskSensor = NULL;
 static void vTaskSensor(void *pvParameters);
 
 
-void CreateSensorTask(void *pvParameters)
+void CreateSensorTask(void)
 {
     //红外传感器状态上送
     xTaskCreate((TaskFunction_t )vTaskSensor,     
                 (const char*    )SensorTaskName,   
                 (uint16_t       )SENSOR_STK_SIZE, 
-                (void*          )pvParameters,
+                (void*          )NULL,
                 (UBaseType_t    )SENSOR_TASK_PRIO,
                 (TaskHandle_t*  )&xHandleTaskSensor);  
 }

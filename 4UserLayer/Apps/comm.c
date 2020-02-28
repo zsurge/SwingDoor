@@ -43,13 +43,9 @@
 /*----------------------------------------------*
  * 模块级变量                                   *
  *----------------------------------------------*/
-TaskHandle_t xHandleTaskLed = NULL;      //LED灯
-
 
 MOTORCTRL_QUEUE_T gMotorCtrlQueue;    //定义一个结构体用于消息队列，用于同步处理相应数据
 
-
-SemaphoreHandle_t gxMutex = NULL;
 
 
 RECVHOST_T gRecvHost;

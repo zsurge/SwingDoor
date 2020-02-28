@@ -1,5 +1,5 @@
-..\6bin\test.o: ..\4UserLayer\test.c
-..\6bin\test.o: ..\4UserLayer\test.h
+..\6bin\test.o: ..\4UserLayer\Apps\test.c
+..\6bin\test.o: ..\4UserLayer\Apps\test.h
 ..\6bin\test.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\6bin\test.o: ..\3MiddleLayer\cjson\cJSON.h
 ..\6bin\test.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
@@ -58,8 +58,8 @@
 ..\6bin\test.o: ..\2LowLayer\FLASH\inc\sfud_cfg.h
 ..\6bin\test.o: ..\2LowLayer\FLASH\inc\sfud_flash_def.h
 ..\6bin\test.o: ..\3MiddleLayer\ini\ini.h
-..\6bin\test.o: ..\4UserLayer\tool.h
-..\6bin\test.o: ..\4UserLayer\errorcode.h
+..\6bin\test.o: ..\4UserLayer\Apps\tool.h
+..\6bin\test.o: ..\4UserLayer\Apps\errorcode.h
 ..\6bin\test.o: ..\2LowLayer\USART\bsp_usart1.h
 ..\6bin\test.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\6bin\test.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

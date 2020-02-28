@@ -40,7 +40,7 @@ extern TaskHandle_t xHandleTaskBarCode;      //解析上位机指令
  * 内部函数原型说明                             *
  *----------------------------------------------*/
 
-void CreateBarCodeTask(void *pvParameters);
+void CreateBarCodeTask(void);
 
 
 

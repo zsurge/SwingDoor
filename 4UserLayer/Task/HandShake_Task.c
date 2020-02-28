@@ -20,8 +20,9 @@
 /*----------------------------------------------*
  * 包含头文件                                   *
  *----------------------------------------------*/
-#include"handshake_task.h"
-
+#include "handshake_task.h"
+#include "easyflash.h"
+#include "comm.h"
 /*----------------------------------------------*
  * 宏定义                                       *
  *----------------------------------------------*/
@@ -53,7 +54,7 @@ void vTaskHandShake(void *pvParameters)
     uint8_t bcdbuf[6] = {0};
 
     /* get the boot count number from Env */
-    c_old_boot_times = ef_get_env("boot_times");
+    c_old_boot_times = ef_get_env((const char*)"boot_times");
     assert_param(c_old_boot_times);
     i_boot_times = atol(c_old_boot_times);
 
@@ -76,12 +77,12 @@ void vTaskHandShake(void *pvParameters)
 
 
 
- void CreateHandShakeTask(void *pvParameters)
+ void CreateHandShakeTask(void)
 {    //跟android握手
     xTaskCreate((TaskFunction_t )vTaskHandShake,
                 (const char*    )handShakeTaskName,       
                 (uint16_t       )HANDSHAKE_STK_SIZE, 
-                (void*          )pvParameters,              
+                (void*          )NULL,              
                 (UBaseType_t    )HANDSHAKE_TASK_PRIO,    
                 (TaskHandle_t*  )&xHandleTaskHandShake);  
 

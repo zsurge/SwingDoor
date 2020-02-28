@@ -1,5 +1,5 @@
-..\6bin\tool.o: ..\4UserLayer\tool.c
-..\6bin\tool.o: ..\4UserLayer\tool.h
+..\6bin\tool.o: ..\4UserLayer\Apps\tool.c
+..\6bin\tool.o: ..\4UserLayer\Apps\tool.h
 ..\6bin\tool.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\6bin\tool.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\6bin\tool.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h

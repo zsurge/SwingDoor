@@ -42,7 +42,7 @@ extern TaskHandle_t xHandleTaskReader;      //解析上位机指令
  * 内部函数原型说明                             *
  *----------------------------------------------*/
 
-void CreateReaderTask(void *pvParameters);
+void CreateReaderTask(void);
 
 
 

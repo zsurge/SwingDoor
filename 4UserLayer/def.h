@@ -47,6 +47,19 @@
 #include "comm.h"
 #include "Devinfo.h"
 
+//用户任务
+#include "pub_options.h"
+#include "BarCode_Task.h"
+#include "HandShake_Task.h"
+#include "Led_Task.h"
+#include "MotorCtrl_Task.h"
+#include "MsgParse_Task.h"
+#include "pub_options.h"
+#include "Reader_Task.h"  
+#include "Sensor_Task.h"  
+#include "Watchdog_Task.h"
+
+
 
 /*
 *********************************************************************************************************

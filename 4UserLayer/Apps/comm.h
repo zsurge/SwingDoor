@@ -31,7 +31,7 @@
 /*----------------------------------------------*
  * ∫Í∂®“Â                                       *
  *----------------------------------------------*/
-//#define STX		    					0x02	/* frame head */
+#define STX		    					0x02	/* frame head */
 #define ETX                             0x03    /* frame tail */
 #define CMDSUCC	    					0x06	/* command success */
 #define CMDERRO	    					0x15	/* command error */

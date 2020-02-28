@@ -23,6 +23,10 @@
 #include "led_task.h"
 #include "tool.h"
 #include "bsp_led.h" 
+#include "comm.h"
+#include "bsp_beep.h" 
+#include "bsp_uart_fifo.h"
+
 
 /*----------------------------------------------*
  * 宏定义                                       *
@@ -47,13 +51,13 @@ TaskHandle_t xHandleTaskLed = NULL;      //LED灯
  *----------------------------------------------*/
 static void vTaskLed(void *pvParameters);
 
-void CreateLedTask(void *pvParameters)
+void CreateLedTask(void)
 {
     //创建LED任务
     xTaskCreate((TaskFunction_t )vTaskLed,         
                 (const char*    )ledTaskName,       
                 (uint16_t       )LED_STK_SIZE, 
-                (void*          )pvParameters,              
+                (void*          )NULL,              
                 (UBaseType_t    )LED_TASK_PRIO,    
                 (TaskHandle_t*  )&xHandleTaskLed);   
 

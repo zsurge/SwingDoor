@@ -1,5 +1,5 @@
-..\6bin\errorcode.o: ..\4UserLayer\errorcode.c
-..\6bin\errorcode.o: ..\4UserLayer\errorcode.h
+..\6bin\errorcode.o: ..\4UserLayer\Apps\errorcode.c
+..\6bin\errorcode.o: ..\4UserLayer\Apps\errorcode.h
 ..\6bin\errorcode.o: ..\4UserLayer\stm32f4xx_conf.h
 ..\6bin\errorcode.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h
 ..\6bin\errorcode.o: ..\4UserLayer\stm32f4xx.h
@@ -48,15 +48,10 @@
 ..\6bin\errorcode.o: ..\5FreeRTOS\include\mpu_wrappers.h
 ..\6bin\errorcode.o: ..\5FreeRTOS\include\task.h
 ..\6bin\errorcode.o: ..\5FreeRTOS\include\list.h
-..\6bin\errorcode.o: ..\4UserLayer\comm.h
-..\6bin\errorcode.o: ..\2LowLayer\USART\bsp_usart1.h
-..\6bin\errorcode.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-..\6bin\errorcode.o: ..\2LowLayer\USART\bsp_usart2.h
-..\6bin\errorcode.o: ..\4UserLayer\tool.h
+..\6bin\errorcode.o: ..\4UserLayer\Apps\comm.h
+..\6bin\errorcode.o: ..\4UserLayer\Apps\tool.h
 ..\6bin\errorcode.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\6bin\errorcode.o: ..\3MiddleLayer\cjson\cJSON.h
 ..\6bin\errorcode.o: ..\2LowLayer\INFRARED\bsp_infrared.h
 ..\6bin\errorcode.o: ..\3MiddleLayer\delay\delay.h
 ..\6bin\errorcode.o: ..\3MiddleLayer\sys\sys.h
-..\6bin\errorcode.o: ..\5FreeRTOS\include\semphr.h
-..\6bin\errorcode.o: ..\5FreeRTOS\include\queue.h

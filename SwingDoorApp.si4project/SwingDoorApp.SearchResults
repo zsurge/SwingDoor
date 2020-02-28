@@ -1,12 +1,3 @@
----- AppPrintf Matches (11 in 3 files) ----
-main.c (4UserLayer) line 36 : static void AppPrintf(char *format, ...);
-AppObjCreate in main.c (4UserLayer) :         AppPrintf("创建事件标志组失败\r\n");
-AppObjCreate in main.c (4UserLayer) :         AppPrintf("创建互斥信号量失败\r\n");
-AppObjCreate in main.c (4UserLayer) : //        AppPrintf("创建互斥信号量失败\r\n");
-AppObjCreate in main.c (4UserLayer) :         AppPrintf("创建xTransQueue消息队列失败!\r\n");
-main.c (4UserLayer) line 188 : *	函 数 名: AppPrintf
-main.c (4UserLayer) line 195 : static void  AppPrintf(char *format, ...)
-vTaskMotorCtrl in MotorCtrl_Task.c (4UserLayer\Task) :                 AppPrintf("door a connect error!\r\n"); 
-vTaskWatchDog in Watchdog_Task.c (4UserLayer\Task) :     AppPrintf("=====================================================\r\n");
-vTaskWatchDog in Watchdog_Task.c (4UserLayer\Task) :     AppPrintf("系统开机执行\r\n");
-vTaskWatchDog in Watchdog_Task.c (4UserLayer\Task) :     AppPrintf("=====================================================\r\n");
+---- TASK_BIT_6 Matches (2 in 1 files) ----
+pub_options.h (4UserLayer\Task) line 44 : #define TASK_BIT_6	 (1 << 6)
+pub_options.h (4UserLayer\Task) line 45 : #define TASK_BIT_ALL ( TASK_BIT_0 | TASK_BIT_1 | TASK_BIT_2 |TASK_BIT_3|TASK_BIT_4|TASK_BIT_5|TASK_BIT_6)

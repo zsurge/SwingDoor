@@ -41,7 +41,7 @@ extern TaskHandle_t xHandleTaskWatchDog;
  * 内部函数原型说明                             *
  *----------------------------------------------*/
 
-void CreateWatchDogTask(void *pvParameters);
+void CreateWatchDogTask(void);
 
 
 

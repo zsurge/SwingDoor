@@ -21,6 +21,8 @@
  * 包含头文件                                   *
  *----------------------------------------------*/
 #include "MsgParse_Task.h"
+#include "bsp_uart_fifo.h"
+#include "comm.h"
 /*----------------------------------------------*
  * 宏定义                                       *
  *----------------------------------------------*/
@@ -42,13 +44,13 @@ TaskHandle_t xHandleTaskBarCode = NULL;
  *----------------------------------------------*/
 static void vTaskBarCode(void *pvParameters);
 
-void CreateBarCodeTask(void *pvParameters)
+void CreateBarCodeTask(void)
 {
     //跟android通讯串口数据解析
     xTaskCreate((TaskFunction_t )vTaskBarCode,     
                 (const char*    )BarCodeTaskName,   
                 (uint16_t       )BARCODE_STK_SIZE, 
-                (void*          )pvParameters,
+                (void*          )NULL,
                 (UBaseType_t    )BARCODE_TASK_PRIO,
                 (TaskHandle_t*  )&xHandleTaskBarCode);
 }

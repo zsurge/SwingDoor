@@ -20,6 +20,8 @@
  * 包含头文件                                   *
  *----------------------------------------------*/
 #include "MsgParse_Task.h"
+#include "comm.h"
+
 /*----------------------------------------------*
  * 宏定义                                       *
  *----------------------------------------------*/
@@ -41,13 +43,13 @@ TaskHandle_t xHandleTaskReader = NULL;
  *----------------------------------------------*/
 static void vTaskReader(void *pvParameters);
 
-void CreateReaderTask(void *pvParameters)
+void CreateReaderTask(void)
 {
     //跟android通讯串口数据解析
     xTaskCreate((TaskFunction_t )vTaskReader,     
                 (const char*    )ReaderTaskName,   
                 (uint16_t       )READER_STK_SIZE, 
-                (void*          )pvParameters,
+                (void*          )NULL,
                 (UBaseType_t    )READER_TASK_PRIO,
                 (TaskHandle_t*  )&xHandleTaskReader);
 }
@@ -61,10 +63,7 @@ static void vTaskReader(void *pvParameters)
     
 //    uint32_t FunState = 0;
 //    char *IcReaderState;
-#ifdef USEQUEUE
-    QUEUE_TO_HOST_T *ptReaderToHost; 
-    ptReaderToHost = &gQueueToHost;
-#endif
+
 //    IcReaderState = ef_get_env("ICSTATE");
 //    assert_param(IcReaderState);
 //    FunState = atol(IcReaderState);
@@ -83,24 +82,7 @@ static void vTaskReader(void *pvParameters)
                 dat[0] = CardID>>24;
                 dat[1] = CardID>>16;
                 dat[2] = CardID>>8;
-                dat[3] = CardID&0XFF;    
-
-            #ifdef USEQUEUE
-                ptReaderToHost->cmd = WGREADER;
-                memcpy(ptReaderToHost->data,dat,4);
-
-                /* 使用消息队列实现指针变量的传递 */
-                if(xQueueSend(xTransQueue,              /* 消息队列句柄 */
-                             (void *) &ptReaderToHost,   /* 发送结构体指针变量ptQueueToHost的地址 */
-                             (TickType_t)10) != pdPASS )
-                {
-                    DBG("向xTransQueue发送数据失败，即使等待了10个时钟节拍\r\n");                
-                } 
-                else
-                {
-                    dbh("WGREADER",(char *)dat,4);
-                }
-            #endif
+                dat[3] = CardID&0XFF; 
                 
                 send_to_host(WGREADER,dat,4);
             }  

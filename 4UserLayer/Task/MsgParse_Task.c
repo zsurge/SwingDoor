@@ -42,13 +42,13 @@ TaskHandle_t xHandleTaskMsgParse = NULL;
  *----------------------------------------------*/
 static void vTaskMsgParse(void *pvParameters);
 
-void CreateMsgParseTask(void *pvParameters)
+void CreateMsgParseTask(void)
 {
     //跟android通讯串口数据解析
     xTaskCreate((TaskFunction_t )vTaskMsgParse,     
                 (const char*    )MsgParseTaskName,   
                 (uint16_t       )MSGPARSE_STK_SIZE, 
-                (void*          )pvParameters,
+                (void*          )NULL,
                 (UBaseType_t    )MSGPARSE_TASK_PRIO,
                 (TaskHandle_t*  )&xHandleTaskMsgParse);
 }

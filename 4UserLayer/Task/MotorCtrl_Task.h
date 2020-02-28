@@ -45,7 +45,7 @@ extern TaskHandle_t xHandleTaskMotorCtrl;
  *----------------------------------------------*/
 
 
-void CreateMotorCtrlTask(void *pvParameters);
+void CreateMotorCtrlTask(void);
 
 
 

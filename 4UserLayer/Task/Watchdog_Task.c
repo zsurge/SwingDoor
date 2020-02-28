@@ -20,6 +20,7 @@
  * 包含头文件                                   *
  *----------------------------------------------*/
 #include "Watchdog_Task.h"
+#include "tool.h"
 /*----------------------------------------------*
  * 宏定义                                       *
  *----------------------------------------------*/
@@ -41,13 +42,13 @@ TaskHandle_t xHandleTaskWatchDog = NULL;
  *----------------------------------------------*/
 static void vTaskWatchDog(void *pvParameters);
 
-void CreateWatchDogTask(void *pvParameters)
+void CreateWatchDogTask(void)
 {
     //看门狗
     xTaskCreate((TaskFunction_t )vTaskWatchDog,     
                 (const char*    )WatchDogTaskName,   
                 (uint16_t       )WATCHDOG_STK_SIZE, 
-                (void*          )pvParameters,
+                (void*          )NULL,
                 (UBaseType_t    )WATCHDOG_TASK_PRIO,
                 (TaskHandle_t*  )&xHandleTaskWatchDog);
 }

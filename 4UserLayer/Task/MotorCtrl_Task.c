@@ -22,6 +22,8 @@
  *----------------------------------------------*/
 #include"MotorCtrl_Task.h"
 #include "bsp_uart_fifo.h"
+#include "comm.h"
+
 
 /*----------------------------------------------*
  * 宏定义                                       *
@@ -51,15 +53,15 @@ static void vTaskMotorCtrl(void *pvParameters);
 
 
 
-void CreateMotorCtrlTask(void *pvParameters)
+void CreateMotorCtrlTask(void)
 {
     //创建电机信息返回任务
-    xTaskCreate((TaskFunction_t )vTaskMotorToHost,     
+    xTaskCreate((TaskFunction_t )vTaskMotorCtrl,     
                 (const char*    )MotorCtrlTaskName,   
                 (uint16_t       )MOTOR_STK_SIZE, 
-                (void*          )pvParameters,
+                (void*          )NULL,
                 (UBaseType_t    )MOTOR_TASK_PRIO,
-                (TaskHandle_t*  )&xHandleTaskMotor);     
+                (TaskHandle_t*  )&xHandleTaskMotorCtrl);     
 
 }
 
@@ -103,7 +105,7 @@ static void vTaskMotorCtrl(void *pvParameters)
             RS485_SendBuf(COM4, ReadStatus,MOTORCTRL_QUEUE_BUF_LEN);//查询A电机状态
         }                            
 
-        vTaskDelay(100);
+        vTaskDelay(200);
         
         readLen = RS485_Recv(COM4,buf,8);       
 
@@ -134,7 +136,7 @@ static void vTaskMotorCtrl(void *pvParameters)
             }
             
         }
-        
+
         /* 发送事件标志，表示任务正常运行 */        
         xEventGroupSetBits(xCreatedEventGroup, TASK_BIT_1);
       
