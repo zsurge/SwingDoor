@@ -92,7 +92,7 @@ static void vTaskMotorCtrl(void *pvParameters)
         //获取到，则执行上位机指令，获取不到，则执行状态查询
         xReturn = xQueueReceive( gxMotorCtrlQueue,    /* 消息队列的句柄 */
                                  (void *)&ptMotor,  /*这里获取的是结构体的地址 */
-                                 (TickType_t)200); /* 设置阻塞时间 */
+                                 (TickType_t)100); /* 设置阻塞时间 */
         if(pdTRUE == xReturn)
         {
             //消息接收成功，发送接收到的消息
@@ -105,7 +105,7 @@ static void vTaskMotorCtrl(void *pvParameters)
             RS485_SendBuf(COM4, ReadStatus,MOTORCTRL_QUEUE_BUF_LEN);//查询A电机状态
         }                            
 
-        vTaskDelay(100);
+        vTaskDelay(200);
         
         readLen = RS485_Recv(COM4,buf,8);       
 
