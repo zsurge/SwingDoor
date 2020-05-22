@@ -27,8 +27,18 @@ Project File Date:  02/28/2020
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'd:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'SwingDoorApp'
+compiling bsp_iwdg.c...
+compiling BarCode_Task.c...
+compiling bsp.c...
+compiling main.c...
+..\4UserLayer\main.c(41): warning:  #177-D: variable "xHandleTaskAppCreate"  was declared but never referenced
+  static TaskHandle_t xHandleTaskAppCreate = NULL;     
+..\4UserLayer\main.c: 1 warning, 0 errors
+linking...
+Program Size: Code=47942 RO-data=4090 RW-data=456 ZI-data=173016  
+FromELF: creating hex file...
 After Build - User command #1: fromelf --bin -o "..\6Bin\SwingDoorApp.bin" "..\6Bin\SwingDoorApp.axf"
-"..\6Bin\SwingDoorApp.axf" - 0 Error(s), 0 Warning(s).
+"..\6Bin\SwingDoorApp.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -42,7 +52,7 @@ Package Vendor: Keil
   d:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

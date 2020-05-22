@@ -1,3 +1,5 @@
----- TASK_BIT_6 Matches (2 in 1 files) ----
-pub_options.h (4UserLayer\Task) line 44 : #define TASK_BIT_6	 (1 << 6)
-pub_options.h (4UserLayer\Task) line 45 : #define TASK_BIT_ALL ( TASK_BIT_0 | TASK_BIT_1 | TASK_BIT_2 |TASK_BIT_3|TASK_BIT_4|TASK_BIT_5|TASK_BIT_6)
+---- Nonzero Matches (4 in 4 files) ----
+bsp_Ex_SetLed in bsp_led.c (2LowLayer\LED) :     if(Nonzero(dat,15) == 0)
+vTaskLed in Led_Task.c (4UserLayer\Task) :             if(Nonzero(tmp,MAX_EXLED_LEN))
+tool.c (4UserLayer\Apps) line 368 : uint8_t Nonzero(uint8_t *buf,uint8_t len)
+tool.h (4UserLayer\Apps) line 65 : uint8_t Nonzero(uint8_t *buf,uint8_t len);

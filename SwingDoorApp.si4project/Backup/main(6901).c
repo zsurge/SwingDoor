@@ -64,13 +64,12 @@ int main(void)
     MotorInit();
 
     //创建AppTaskCreate任务
-    AppTaskCreate();
-//    xTaskCreate((TaskFunction_t )AppTaskCreate,     
-//                (const char*    )AppCreateTaskName,   
-//                (uint16_t       )APPCREATE_STK_SIZE, 
-//                (void*          )NULL,
-//                (UBaseType_t    )APPCREATE_TASK_PRIO,
-//                (TaskHandle_t*  )&xHandleTaskAppCreate);   
+    xTaskCreate((TaskFunction_t )AppTaskCreate,     
+                (const char*    )AppCreateTaskName,   
+                (uint16_t       )APPCREATE_STK_SIZE, 
+                (void*          )NULL,
+                (UBaseType_t    )APPCREATE_TASK_PRIO,
+                (TaskHandle_t*  )&xHandleTaskAppCreate);   
 
     
     /* 启动调度，开始执行任务 */
@@ -89,7 +88,7 @@ int main(void)
 static void AppTaskCreate (void)
 {
     //进入临界区
-//    taskENTER_CRITICAL(); 
+    taskENTER_CRITICAL(); 
     
     //握手
     CreateHandShakeTask();
@@ -116,10 +115,10 @@ static void AppTaskCreate (void)
     CreateWatchDogTask();
 
     //删除本身
-//    vTaskDelete(xHandleTaskAppCreate); //删除AppTaskCreate任务
+    vTaskDelete(xHandleTaskAppCreate); //删除AppTaskCreate任务
 
     //退出临界区
-//    taskEXIT_CRITICAL();            
+    taskEXIT_CRITICAL();            
 
 }
 

@@ -78,7 +78,7 @@ static void vTaskBarCode(void *pvParameters)
            
 //           dbh("QR HEX", recv_buf, len);
 
-           if(len > 20  && recv_buf[len-1] == 0x0A && recv_buf[len-2] == 0x0D)
+           if(len > 2  && recv_buf[len-1] == 0x0A && recv_buf[len-2] == 0x0D)
            {
 
                 SendAsciiCodeToHost(QRREADER,NO_ERR,recv_buf);
