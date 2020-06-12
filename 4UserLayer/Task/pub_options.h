@@ -44,7 +44,7 @@
 #define TASK_BIT_ALL ( TASK_BIT_0 | TASK_BIT_1 | TASK_BIT_2 |TASK_BIT_3|TASK_BIT_4|TASK_BIT_5)
 
 //读取电机状态最大次数
-#define READ_MOTOR_STATUS_TIMES 20
+#define READ_MOTOR_STATUS_TIMES 5
 
 
 #define MOTORCTRL_QUEUE_LEN    20     /* 队列的长度，最大可包含多少个消息 */

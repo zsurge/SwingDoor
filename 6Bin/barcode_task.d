@@ -63,3 +63,4 @@
 ..\6bin\barcode_task.o: ..\3MiddleLayer\delay\delay.h
 ..\6bin\barcode_task.o: ..\3MiddleLayer\sys\sys.h
 ..\6bin\barcode_task.o: ..\4UserLayer\Apps\errorcode.h
+..\6bin\barcode_task.o: ..\2LowLayer\INFRARED\bsp_sensor.h

@@ -44,6 +44,7 @@
 ..\6bin\comm.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 ..\6bin\comm.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
 ..\6bin\comm.o: ..\4UserLayer\Apps\errorcode.h
+..\6bin\comm.o: ..\2LowLayer\INFRARED\bsp_sensor.h
 ..\6bin\comm.o: ..\2LowLayer\LED\bsp_led.h
 ..\6bin\comm.o: ..\3MiddleLayer\malloc\malloc.h
 ..\6bin\comm.o: ..\3MiddleLayer\ini\ini.h

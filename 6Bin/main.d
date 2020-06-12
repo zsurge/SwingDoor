@@ -71,6 +71,7 @@
 ..\6bin\main.o: ..\2LowLayer\FLASH\bsp_spi_flash.h
 ..\6bin\main.o: ..\4UserLayer\Apps\comm.h
 ..\6bin\main.o: ..\2LowLayer\INFRARED\bsp_infrared.h
+..\6bin\main.o: ..\2LowLayer\INFRARED\bsp_sensor.h
 ..\6bin\main.o: ..\4UserLayer\Apps\Devinfo.h
 ..\6bin\main.o: ..\4UserLayer\Task\pub_options.h
 ..\6bin\main.o: ..\5FreeRTOS\include\queue.h

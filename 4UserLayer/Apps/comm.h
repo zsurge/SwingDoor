@@ -23,6 +23,7 @@
 #include "cJSON.h"
 #include "bsp_infrared.h"
 #include "errorcode.h"
+#include "bsp_sensor.h"
 
 /*----------------------------------------------*
  * 包含头文件                                   *
@@ -89,6 +90,7 @@ typedef struct
 {
     uint8_t cmd;     //指令字
     uint8_t *cmd_desc;//指令描述    
+    uint8_t len;
     uint8_t cmd_data[MAX_CMD_BUF_LEN];//指令内容(若有)
 }CMD_RX_T;
 

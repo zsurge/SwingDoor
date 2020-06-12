@@ -70,5 +70,6 @@
 ..\6bin\bsp.o: ..\2LowLayer\BEEP\bsp_beep.h
 ..\6bin\bsp.o: ..\2LowLayer\FLASH\bsp_spi_flash.h
 ..\6bin\bsp.o: ..\2LowLayer\INFRARED\bsp_infrared.h
+..\6bin\bsp.o: ..\2LowLayer\INFRARED\bsp_sensor.h
 ..\6bin\bsp.o: ..\2LowLayer\WDG\bsp_iwdg.h
 ..\6bin\bsp.o: ..\2LowLayer\READER\bsp_wiegand.h

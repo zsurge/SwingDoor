@@ -64,10 +64,12 @@ void vTaskHandShake(void *pvParameters)
     /* interger to string */
     sprintf(c_new_boot_times,"%012ld", i_boot_times);
 
+    printf("boot_times = %s\r\n",c_new_boot_times);
+
     /* set and store the boot count number to Env */
     ef_set_env("boot_times", c_new_boot_times);    
 
-    asc2bcd(bcdbuf,(uint8_t *)c_new_boot_times , 12, 0);
+    asc2bcd(bcdbuf,(uint8_t *)c_new_boot_times , 12, 1);
 
     send_to_host(HANDSHAKE,bcdbuf,6);  
 

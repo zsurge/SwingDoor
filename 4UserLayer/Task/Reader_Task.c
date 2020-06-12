@@ -21,6 +21,8 @@
  *----------------------------------------------*/
 #include "MsgParse_Task.h"
 #include "comm.h"
+#include "string.h"
+#include "bsp_Wiegand.h"
 
 /*----------------------------------------------*
  * ∫Í∂®“Â                                       *

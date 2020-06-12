@@ -50,7 +50,8 @@
 #include "bsp_beep.h" 
 #include "bsp_spi_flash.h"
 #include "bsp_infrared.h"
-//#include "bsp_digitaltube.h"
+#include "bsp_sensor.h"
+
 #include "bsp_iwdg.h"
 //#include "bsp_infrared_it.h"
 #include "bsp_wiegand.h"

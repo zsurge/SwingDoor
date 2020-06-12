@@ -43,7 +43,7 @@ void bsp_TimeSysTickHandler (void)
     if (g1msTimerUART3 > 0) g1msTimerUART3--;
     if (g1msTimerUART4 > 0) g1msTimerUART4--;
     if (g1msTimerUART5 > 0) g1msTimerUART5--;
-    bsp_inf_clk();
+//    bsp_inf_clk();
 }
 
 void bsp_TIM6_Init(void)

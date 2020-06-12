@@ -1,6 +1,6 @@
 Dependencies for Project 'SwingDoorApp', Target 'SwingDoorApp': (DO NOT MODIFY !)
 F (..\Log\ModifyRecords.txt)(0x5E560E2F)()
-F (..\4UserLayer\main.c)(0x5EC7396C)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\main.o --omf_browse ..\6bin\main.crf --depend ..\6bin\main.d)
+F (..\4UserLayer\main.c)(0x5EE35CBF)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\main.o --omf_browse ..\6bin\main.crf --depend ..\6bin\main.d)
 I (..\4UserLayer\def.h)(0x5E588364)
 I (d:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x599ECD2A)
 I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
@@ -48,7 +48,7 @@ I (..\2LowLayer\FLASH\inc\sfud_def.h)(0x5D0B0488)
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (..\2LowLayer\FLASH\inc\sfud_cfg.h)(0x5DA1314E)
 I (..\2LowLayer\FLASH\inc\sfud_flash_def.h)(0x5D0B0488)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (..\3MiddleLayer\easyflash\inc\easyflash.h)(0x5D242952)
 I (..\3MiddleLayer\easyflash\inc\ef_cfg.h)(0x5DE751BC)
 I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
@@ -70,10 +70,11 @@ I (..\2LowLayer\TIME\bsp_time.h)(0x5E560E2F)
 I (..\2LowLayer\LED\bsp_led.h)(0x5DB116A4)
 I (..\2LowLayer\KEY\bsp_key.h)(0x5E560E2E)
 I (..\2LowLayer\FLASH\bsp_spi_flash.h)(0x5D3EB6C5)
-I (..\4UserLayer\Apps\comm.h)(0x5E5878DA)
+I (..\4UserLayer\Apps\comm.h)(0x5EE336FD)
 I (..\2LowLayer\INFRARED\bsp_infrared.h)(0x5DB116A4)
+I (..\2LowLayer\INFRARED\bsp_sensor.h)(0x5ECB21FD)
 I (..\4UserLayer\Apps\Devinfo.h)(0x5D71B8D3)
-I (..\4UserLayer\Task\pub_options.h)(0x5E588F62)
+I (..\4UserLayer\Task\pub_options.h)(0x5EE335F9)
 I (..\5FreeRTOS\include\queue.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\croutine.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\semphr.h)(0x5D0B0488)
@@ -87,7 +88,7 @@ I (..\4UserLayer\Task\MsgParse_Task.h)(0x5E5872B7)
 I (..\4UserLayer\Task\Reader_Task.h)(0x5E5872B2)
 I (..\4UserLayer\Task\Sensor_Task.h)(0x5E5872A5)
 I (..\4UserLayer\Task\Watchdog_Task.h)(0x5E58729F)
-I (..\2LowLayer\BSP\bsp.h)(0x5DD3A19B)
+I (..\2LowLayer\BSP\bsp.h)(0x5EE33824)
 I (..\3MiddleLayer\stmflash\stmflash.h)(0x5D0B0488)
 I (..\2LowLayer\FLASH\bsp_flash.h)(0x5D26FC1C)
 I (..\2LowLayer\SUART\bsp_uart.h)(0x5DB116A4)
@@ -170,9 +171,9 @@ I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
-F (..\4UserLayer\Apps\comm.c)(0x5E588440)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\comm.o --omf_browse ..\6bin\comm.crf --depend ..\6bin\comm.d)
-I (..\4UserLayer\Apps\comm.h)(0x5E5878DA)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+F (..\4UserLayer\Apps\comm.c)(0x5EE33A87)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\comm.o --omf_browse ..\6bin\comm.crf --depend ..\6bin\comm.d)
+I (..\4UserLayer\Apps\comm.h)(0x5EE336FD)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -215,6 +216,7 @@ I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
 I (..\4UserLayer\Apps\errorcode.h)(0x5E560E2F)
+I (..\2LowLayer\INFRARED\bsp_sensor.h)(0x5ECB21FD)
 I (..\2LowLayer\LED\bsp_led.h)(0x5DB116A4)
 I (..\3MiddleLayer\malloc\malloc.h)(0x5DE751BC)
 I (..\3MiddleLayer\ini\ini.h)(0x5DB116A4)
@@ -238,14 +240,14 @@ I (..\5FreeRTOS\include\task.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\list.h)(0x5D0B0488)
 I (..\4UserLayer\Apps\Devinfo.h)(0x5D71B8D3)
 I (..\2LowLayer\SUART\bsp_uart.h)(0x5DB116A4)
-I (..\4UserLayer\Task\pub_options.h)(0x5E588F62)
+I (..\4UserLayer\Task\pub_options.h)(0x5EE335F9)
 I (..\5FreeRTOS\include\queue.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\croutine.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\semphr.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\event_groups.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\timers.h)(0x5D0B0488)
 I (..\4UserLayer\Task\led_task.h)(0x5E5871FD)
-F (..\4UserLayer\Apps\Devinfo.c)(0x5E58B4DB)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\devinfo.o --omf_browse ..\6bin\devinfo.crf --depend ..\6bin\devinfo.d)
+F (..\4UserLayer\Apps\Devinfo.c)(0x5EE333D6)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\devinfo.o --omf_browse ..\6bin\devinfo.crf --depend ..\6bin\devinfo.d)
 I (..\4UserLayer\Apps\Devinfo.h)(0x5D71B8D3)
 I (..\4UserLayer\stm32f4xx_conf.h)(0x5D1B056F)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5D0B0488)
@@ -281,7 +283,7 @@ I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -334,13 +336,14 @@ I (..\5FreeRTOS\portable\RVDS\ARM_CM4F\portmacro.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\mpu_wrappers.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\task.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\list.h)(0x5D0B0488)
-I (..\4UserLayer\Apps\comm.h)(0x5E5878DA)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+I (..\4UserLayer\Apps\comm.h)(0x5EE336FD)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (..\3MiddleLayer\cjson\cJSON.h)(0x5D0B0488)
 I (..\2LowLayer\INFRARED\bsp_infrared.h)(0x5DB116A4)
 I (..\3MiddleLayer\delay\delay.h)(0x5D0B0488)
 I (..\3MiddleLayer\sys\sys.h)(0x5D71B8D3)
+I (..\2LowLayer\INFRARED\bsp_sensor.h)(0x5ECB21FD)
 F (..\4UserLayer\Apps\test.c)(0x5D84B7BF)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\test.o --omf_browse ..\6bin\test.crf --depend ..\6bin\test.d)
 I (..\4UserLayer\Apps\test.h)(0x5DB116A4)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
@@ -400,7 +403,7 @@ I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (..\2LowLayer\FLASH\inc\sfud_cfg.h)(0x5DA1314E)
 I (..\2LowLayer\FLASH\inc\sfud_flash_def.h)(0x5D0B0488)
 I (..\3MiddleLayer\ini\ini.h)(0x5DB116A4)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (..\4UserLayer\Apps\errorcode.h)(0x5E560E2F)
 I (..\2LowLayer\USART\bsp_usart1.h)(0x5D270ED3)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -411,8 +414,8 @@ I (..\2LowLayer\KEY\bsp_key.h)(0x5E560E2E)
 I (..\2LowLayer\FLASH\bsp_spi_flash.h)(0x5D3EB6C5)
 I (..\2LowLayer\FLASH\bsp_flash.h)(0x5D26FC1C)
 I (..\3MiddleLayer\malloc\malloc.h)(0x5DE751BC)
-F (..\4UserLayer\Apps\tool.c)(0x5E5777CD)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\tool.o --omf_browse ..\6bin\tool.crf --depend ..\6bin\tool.d)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+F (..\4UserLayer\Apps\tool.c)(0x5EE33732)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\tool.o --omf_browse ..\6bin\tool.crf --depend ..\6bin\tool.d)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -454,7 +457,7 @@ I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
 F (..\4UserLayer\Task\BarCode_Task.c)(0x5E75D9AF)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\barcode_task.o --omf_browse ..\6bin\barcode_task.crf --depend ..\6bin\barcode_task.d)
 I (..\4UserLayer\Task\MsgParse_Task.h)(0x5E5872B7)
-I (..\4UserLayer\Task\pub_options.h)(0x5E588F62)
+I (..\4UserLayer\Task\pub_options.h)(0x5EE335F9)
 I (..\5FreeRTOS\include\FreeRTOS.h)(0x5D0B0488)
 I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -507,17 +510,18 @@ I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
-I (..\4UserLayer\Apps\comm.h)(0x5E5878DA)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+I (..\4UserLayer\Apps\comm.h)(0x5EE336FD)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (..\3MiddleLayer\cjson\cJSON.h)(0x5D0B0488)
 I (..\2LowLayer\INFRARED\bsp_infrared.h)(0x5DB116A4)
 I (..\3MiddleLayer\delay\delay.h)(0x5D0B0488)
 I (..\3MiddleLayer\sys\sys.h)(0x5D71B8D3)
 I (..\4UserLayer\Apps\errorcode.h)(0x5E560E2F)
-F (..\4UserLayer\Task\HandShake_Task.c)(0x5E588168)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\handshake_task.o --omf_browse ..\6bin\handshake_task.crf --depend ..\6bin\handshake_task.d)
+I (..\2LowLayer\INFRARED\bsp_sensor.h)(0x5ECB21FD)
+F (..\4UserLayer\Task\HandShake_Task.c)(0x5EE3359D)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\handshake_task.o --omf_browse ..\6bin\handshake_task.crf --depend ..\6bin\handshake_task.d)
 I (..\4UserLayer\Task\handshake_task.h)(0x5E5872C4)
-I (..\4UserLayer\Task\pub_options.h)(0x5E588F62)
+I (..\4UserLayer\Task\pub_options.h)(0x5EE335F9)
 I (..\5FreeRTOS\include\FreeRTOS.h)(0x5D0B0488)
 I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -537,8 +541,8 @@ I (..\5FreeRTOS\include\timers.h)(0x5D0B0488)
 I (..\3MiddleLayer\easyflash\inc\easyflash.h)(0x5D242952)
 I (..\3MiddleLayer\easyflash\inc\ef_cfg.h)(0x5DE751BC)
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\4UserLayer\Apps\comm.h)(0x5E5878DA)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+I (..\4UserLayer\Apps\comm.h)(0x5EE336FD)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (..\3MiddleLayer\cjson\cJSON.h)(0x5D0B0488)
@@ -579,9 +583,10 @@ I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
 I (..\4UserLayer\Apps\errorcode.h)(0x5E560E2F)
-F (..\4UserLayer\Task\Led_Task.c)(0x5E587B7B)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\led_task.o --omf_browse ..\6bin\led_task.crf --depend ..\6bin\led_task.d)
+I (..\2LowLayer\INFRARED\bsp_sensor.h)(0x5ECB21FD)
+F (..\4UserLayer\Task\Led_Task.c)(0x5EE33E93)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\led_task.o --omf_browse ..\6bin\led_task.crf --depend ..\6bin\led_task.d)
 I (..\4UserLayer\Task\led_task.h)(0x5E5871FD)
-I (..\4UserLayer\Task\pub_options.h)(0x5E588F62)
+I (..\4UserLayer\Task\pub_options.h)(0x5EE335F9)
 I (..\5FreeRTOS\include\FreeRTOS.h)(0x5D0B0488)
 I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -598,7 +603,7 @@ I (..\5FreeRTOS\include\croutine.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\semphr.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\event_groups.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\timers.h)(0x5D0B0488)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (..\2LowLayer\LED\bsp_led.h)(0x5DB116A4)
@@ -636,17 +641,18 @@ I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
-I (..\4UserLayer\Apps\comm.h)(0x5E5878DA)
+I (..\4UserLayer\Apps\comm.h)(0x5EE336FD)
 I (..\3MiddleLayer\cjson\cJSON.h)(0x5D0B0488)
 I (..\2LowLayer\INFRARED\bsp_infrared.h)(0x5DB116A4)
 I (..\3MiddleLayer\delay\delay.h)(0x5D0B0488)
 I (..\4UserLayer\Apps\errorcode.h)(0x5E560E2F)
+I (..\2LowLayer\INFRARED\bsp_sensor.h)(0x5ECB21FD)
 I (..\2LowLayer\BEEP\bsp_beep.h)(0x5E560E2E)
 I (..\2LowLayer\USART\bsp_uart_fifo.h)(0x5E560E2F)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
-F (..\4UserLayer\Task\MotorCtrl_Task.c)(0x5E58B4B5)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\motorctrl_task.o --omf_browse ..\6bin\motorctrl_task.crf --depend ..\6bin\motorctrl_task.d)
+F (..\4UserLayer\Task\MotorCtrl_Task.c)(0x5EE35C86)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\motorctrl_task.o --omf_browse ..\6bin\motorctrl_task.crf --depend ..\6bin\motorctrl_task.d)
 I (..\4UserLayer\Task\MotorCtrl_Task.h)(0x5E5872BC)
-I (..\4UserLayer\Task\pub_options.h)(0x5E588F62)
+I (..\4UserLayer\Task\pub_options.h)(0x5EE335F9)
 I (..\5FreeRTOS\include\FreeRTOS.h)(0x5D0B0488)
 I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -699,17 +705,19 @@ I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
-I (..\4UserLayer\Apps\comm.h)(0x5E5878DA)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+I (..\4UserLayer\Apps\comm.h)(0x5EE336FD)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (..\3MiddleLayer\cjson\cJSON.h)(0x5D0B0488)
 I (..\2LowLayer\INFRARED\bsp_infrared.h)(0x5DB116A4)
 I (..\3MiddleLayer\delay\delay.h)(0x5D0B0488)
 I (..\3MiddleLayer\sys\sys.h)(0x5D71B8D3)
 I (..\4UserLayer\Apps\errorcode.h)(0x5E560E2F)
-F (..\4UserLayer\Task\MsgParse_Task.c)(0x5E587265)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\msgparse_task.o --omf_browse ..\6bin\msgparse_task.crf --depend ..\6bin\msgparse_task.d)
+I (..\2LowLayer\INFRARED\bsp_sensor.h)(0x5ECB21FD)
+I (..\4UserLayer\Task\Monitor_Task.h)(0x5ECB76D1)
+F (..\4UserLayer\Task\MsgParse_Task.c)(0x5EE33AF3)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\msgparse_task.o --omf_browse ..\6bin\msgparse_task.crf --depend ..\6bin\msgparse_task.d)
 I (..\4UserLayer\Task\MsgParse_Task.h)(0x5E5872B7)
-I (..\4UserLayer\Task\pub_options.h)(0x5E588F62)
+I (..\4UserLayer\Task\pub_options.h)(0x5EE335F9)
 I (..\5FreeRTOS\include\FreeRTOS.h)(0x5D0B0488)
 I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -726,27 +734,8 @@ I (..\5FreeRTOS\include\croutine.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\semphr.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\event_groups.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\timers.h)(0x5D0B0488)
-F (..\4UserLayer\Task\Reader_Task.c)(0x5E587BBA)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\reader_task.o --omf_browse ..\6bin\reader_task.crf --depend ..\6bin\reader_task.d)
-I (..\4UserLayer\Task\MsgParse_Task.h)(0x5E5872B7)
-I (..\4UserLayer\Task\pub_options.h)(0x5E588F62)
-I (..\5FreeRTOS\include\FreeRTOS.h)(0x5D0B0488)
-I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\5FreeRTOS\include\FreeRTOSConfig.h)(0x5E562D54)
-I (..\5FreeRTOS\include\projdefs.h)(0x5D0B0488)
-I (..\5FreeRTOS\include\portable.h)(0x5D0B0488)
-I (..\5FreeRTOS\include\deprecated_definitions.h)(0x5D0B0488)
-I (..\5FreeRTOS\portable\RVDS\ARM_CM4F\portmacro.h)(0x5D0B0488)
-I (..\5FreeRTOS\include\mpu_wrappers.h)(0x5D0B0488)
-I (..\5FreeRTOS\include\task.h)(0x5D0B0488)
-I (..\5FreeRTOS\include\list.h)(0x5D0B0488)
-I (..\5FreeRTOS\include\queue.h)(0x5D0B0488)
-I (..\5FreeRTOS\include\croutine.h)(0x5D0B0488)
-I (..\5FreeRTOS\include\semphr.h)(0x5D0B0488)
-I (..\5FreeRTOS\include\event_groups.h)(0x5D0B0488)
-I (..\5FreeRTOS\include\timers.h)(0x5D0B0488)
-I (..\4UserLayer\Apps\comm.h)(0x5E5878DA)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+I (..\4UserLayer\Apps\comm.h)(0x5EE336FD)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (..\3MiddleLayer\cjson\cJSON.h)(0x5D0B0488)
@@ -787,9 +776,74 @@ I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
 I (..\4UserLayer\Apps\errorcode.h)(0x5E560E2F)
-F (..\4UserLayer\Task\Sensor_Task.c)(0x5E587C58)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\sensor_task.o --omf_browse ..\6bin\sensor_task.crf --depend ..\6bin\sensor_task.d)
+I (..\2LowLayer\INFRARED\bsp_sensor.h)(0x5ECB21FD)
+F (..\4UserLayer\Task\Reader_Task.c)(0x5EE33607)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\reader_task.o --omf_browse ..\6bin\reader_task.crf --depend ..\6bin\reader_task.d)
+I (..\4UserLayer\Task\MsgParse_Task.h)(0x5E5872B7)
+I (..\4UserLayer\Task\pub_options.h)(0x5EE335F9)
+I (..\5FreeRTOS\include\FreeRTOS.h)(0x5D0B0488)
+I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (..\5FreeRTOS\include\FreeRTOSConfig.h)(0x5E562D54)
+I (..\5FreeRTOS\include\projdefs.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\portable.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\deprecated_definitions.h)(0x5D0B0488)
+I (..\5FreeRTOS\portable\RVDS\ARM_CM4F\portmacro.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\mpu_wrappers.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\task.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\list.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\queue.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\croutine.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\semphr.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\event_groups.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\timers.h)(0x5D0B0488)
+I (..\4UserLayer\Apps\comm.h)(0x5EE336FD)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
+I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
+I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
+I (..\3MiddleLayer\cjson\cJSON.h)(0x5D0B0488)
+I (..\2LowLayer\INFRARED\bsp_infrared.h)(0x5DB116A4)
+I (..\3MiddleLayer\delay\delay.h)(0x5D0B0488)
+I (..\3MiddleLayer\sys\sys.h)(0x5D71B8D3)
+I (..\4UserLayer\stm32f4xx.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cm4.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cmInstr.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cmFunc.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cm4_simd.h)(0x5D0B0488)
+I (..\4UserLayer\system_stm32f4xx.h)(0x5D0B0488)
+I (..\4UserLayer\stm32f4xx_conf.h)(0x5D1B056F)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
+I (..\4UserLayer\Apps\errorcode.h)(0x5E560E2F)
+I (..\2LowLayer\INFRARED\bsp_sensor.h)(0x5ECB21FD)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
+I (..\2LowLayer\READER\bsp_Wiegand.h)(0x5DDF7E0F)
+F (..\4UserLayer\Task\Sensor_Task.c)(0x5EE33625)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\sensor_task.o --omf_browse ..\6bin\sensor_task.crf --depend ..\6bin\sensor_task.d)
 I (..\4UserLayer\Task\Sensor_Task.h)(0x5E5872A5)
-I (..\4UserLayer\Task\pub_options.h)(0x5E588F62)
+I (..\4UserLayer\Task\pub_options.h)(0x5EE335F9)
 I (..\5FreeRTOS\include\FreeRTOS.h)(0x5D0B0488)
 I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -842,15 +896,17 @@ I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
-I (..\4UserLayer\Apps\comm.h)(0x5E5878DA)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+I (..\2LowLayer\INFRARED\bsp_sensor.h)(0x5ECB21FD)
+I (..\4UserLayer\Apps\comm.h)(0x5EE336FD)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (..\3MiddleLayer\cjson\cJSON.h)(0x5D0B0488)
 I (..\4UserLayer\Apps\errorcode.h)(0x5E560E2F)
-F (..\4UserLayer\Task\Watchdog_Task.c)(0x5E5883E5)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\watchdog_task.o --omf_browse ..\6bin\watchdog_task.crf --depend ..\6bin\watchdog_task.d)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
+F (..\4UserLayer\Task\Watchdog_Task.c)(0x5EE3363C)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\watchdog_task.o --omf_browse ..\6bin\watchdog_task.crf --depend ..\6bin\watchdog_task.d)
 I (..\4UserLayer\Task\Watchdog_Task.h)(0x5E58729F)
-I (..\4UserLayer\Task\pub_options.h)(0x5E588F62)
+I (..\4UserLayer\Task\pub_options.h)(0x5EE335F9)
 I (..\5FreeRTOS\include\FreeRTOS.h)(0x5D0B0488)
 I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -867,9 +923,107 @@ I (..\5FreeRTOS\include\croutine.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\semphr.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\event_groups.h)(0x5D0B0488)
 I (..\5FreeRTOS\include\timers.h)(0x5D0B0488)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+I (..\2LowLayer\WDG\bsp_iwdg.h)(0x5EA78527)
+I (..\4UserLayer\stm32f4xx.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cm4.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cmInstr.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cmFunc.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cm4_simd.h)(0x5D0B0488)
+I (..\4UserLayer\system_stm32f4xx.h)(0x5D0B0488)
+I (..\4UserLayer\stm32f4xx_conf.h)(0x5D1B056F)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
+F (..\4UserLayer\Task\Monitor_Task.c)(0x5EE35BE1)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\monitor_task.o --omf_browse ..\6bin\monitor_task.crf --depend ..\6bin\monitor_task.d)
+I (..\4UserLayer\Task\Monitor_Task.h)(0x5ECB76D1)
+I (..\4UserLayer\Task\pub_options.h)(0x5EE335F9)
+I (..\5FreeRTOS\include\FreeRTOS.h)(0x5D0B0488)
+I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (..\5FreeRTOS\include\FreeRTOSConfig.h)(0x5E562D54)
+I (..\5FreeRTOS\include\projdefs.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\portable.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\deprecated_definitions.h)(0x5D0B0488)
+I (..\5FreeRTOS\portable\RVDS\ARM_CM4F\portmacro.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\mpu_wrappers.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\task.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\list.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\queue.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\croutine.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\semphr.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\event_groups.h)(0x5D0B0488)
+I (..\5FreeRTOS\include\timers.h)(0x5D0B0488)
+I (..\4UserLayer\Apps\comm.h)(0x5EE336FD)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
+I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
+I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
+I (..\3MiddleLayer\cjson\cJSON.h)(0x5D0B0488)
+I (..\2LowLayer\INFRARED\bsp_infrared.h)(0x5DB116A4)
+I (..\3MiddleLayer\delay\delay.h)(0x5D0B0488)
+I (..\3MiddleLayer\sys\sys.h)(0x5D71B8D3)
+I (..\4UserLayer\stm32f4xx.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cm4.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cmInstr.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cmFunc.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cm4_simd.h)(0x5D0B0488)
+I (..\4UserLayer\system_stm32f4xx.h)(0x5D0B0488)
+I (..\4UserLayer\stm32f4xx_conf.h)(0x5D1B056F)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
+I (..\4UserLayer\Apps\errorcode.h)(0x5E560E2F)
+I (..\2LowLayer\INFRARED\bsp_sensor.h)(0x5ECB21FD)
+I (..\2LowLayer\USART\bsp_uart_fifo.h)(0x5E560E2F)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
 F (..\3MiddleLayer\delay\delay.c)(0x5D0B0488)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\delay.o --omf_browse ..\6bin\delay.crf --depend ..\6bin\delay.d)
 I (..\3MiddleLayer\delay\delay.h)(0x5D0B0488)
 I (..\3MiddleLayer\sys\sys.h)(0x5D71B8D3)
@@ -996,7 +1150,7 @@ I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (..\3MiddleLayer\easyflash\inc\easyflash.h)(0x5D242952)
 I (..\3MiddleLayer\easyflash\inc\ef_cfg.h)(0x5DE751BC)
 I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
@@ -1210,48 +1364,7 @@ I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
-F (..\2LowLayer\INFRARED\bsp_infrared.c)(0x5DB116A4)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\bsp_infrared.o --omf_browse ..\6bin\bsp_infrared.crf --depend ..\6bin\bsp_infrared.d)
-I (..\2LowLayer\INFRARED\bsp_infrared.h)(0x5DB116A4)
-I (..\3MiddleLayer\delay\delay.h)(0x5D0B0488)
-I (..\3MiddleLayer\sys\sys.h)(0x5D71B8D3)
-I (..\4UserLayer\stm32f4xx.h)(0x5D0B0488)
-I (..\1McuLayer\CMSIS\core_cm4.h)(0x5D0B0488)
-I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\1McuLayer\CMSIS\core_cmInstr.h)(0x5D0B0488)
-I (..\1McuLayer\CMSIS\core_cmFunc.h)(0x5D0B0488)
-I (..\1McuLayer\CMSIS\core_cm4_simd.h)(0x5D0B0488)
-I (..\4UserLayer\system_stm32f4xx.h)(0x5D0B0488)
-I (..\4UserLayer\stm32f4xx_conf.h)(0x5D1B056F)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
-I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
-I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
-I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
+F (..\2LowLayer\INFRARED\bsp_infrared.c)(0x5DB116A4)()
 F (..\2LowLayer\KEY\bsp_key.c)(0x5E560E2E)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\bsp_key.o --omf_browse ..\6bin\bsp_key.crf --depend ..\6bin\bsp_key.d)
 I (..\2LowLayer\KEY\bsp_key.h)(0x5E560E2E)
 I (..\3MiddleLayer\sys\sys.h)(0x5D71B8D3)
@@ -1328,12 +1441,12 @@ I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\4UserLayer\Apps\tool.h)(0x5E58A6A7)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
 I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (..\2LowLayer\BEEP\bsp_beep.h)(0x5E560E2E)
 I (..\3MiddleLayer\delay\delay.h)(0x5D0B0488)
-F (..\2LowLayer\TIME\bsp_time.c)(0x5DE751BC)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\bsp_time.o --omf_browse ..\6bin\bsp_time.crf --depend ..\6bin\bsp_time.d)
+F (..\2LowLayer\TIME\bsp_time.c)(0x5EE33845)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\bsp_time.o --omf_browse ..\6bin\bsp_time.crf --depend ..\6bin\bsp_time.d)
 I (..\2LowLayer\TIME\bsp_time.h)(0x5E560E2F)
 I (..\4UserLayer\stm32f4xx_conf.h)(0x5D1B056F)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5D0B0488)
@@ -1377,8 +1490,8 @@ F (..\2LowLayer\USART\bsp_usart1.c)(0x5D37B749)()
 F (..\2LowLayer\USART\bsp_usart2.c)(0x5D40E0BF)()
 F (..\2LowLayer\USART\bsp_usart3.c)(0x5D4E7B0C)()
 F (..\2LowLayer\USART\bsp_usart4.c)(0x5D27DC51)()
-F (..\2LowLayer\BSP\bsp.c)(0x5E586696)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\bsp.o --omf_browse ..\6bin\bsp.crf --depend ..\6bin\bsp.d)
-I (..\2LowLayer\BSP\bsp.h)(0x5DD3A19B)
+F (..\2LowLayer\BSP\bsp.c)(0x5EE35183)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\bsp.o --omf_browse ..\6bin\bsp.crf --depend ..\6bin\bsp.d)
+I (..\2LowLayer\BSP\bsp.h)(0x5EE33824)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
@@ -1447,9 +1560,10 @@ I (..\2LowLayer\LED\bsp_led.h)(0x5DB116A4)
 I (..\2LowLayer\BEEP\bsp_beep.h)(0x5E560E2E)
 I (..\2LowLayer\FLASH\bsp_spi_flash.h)(0x5D3EB6C5)
 I (..\2LowLayer\INFRARED\bsp_infrared.h)(0x5DB116A4)
+I (..\2LowLayer\INFRARED\bsp_sensor.h)(0x5ECB21FD)
 I (..\2LowLayer\WDG\bsp_iwdg.h)(0x5EA78527)
 I (..\2LowLayer\READER\bsp_wiegand.h)(0x5DDF7E0F)
-F (..\2LowLayer\WDG\bsp_iwdg.c)(0x5EC7393C)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\bsp_iwdg.o --omf_browse ..\6bin\bsp_iwdg.crf --depend ..\6bin\bsp_iwdg.d)
+F (..\2LowLayer\WDG\bsp_iwdg.c)(0x5EE334D3)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\bsp_iwdg.o --omf_browse ..\6bin\bsp_iwdg.crf --depend ..\6bin\bsp_iwdg.d)
 I (..\2LowLayer\WDG\bsp_iwdg.h)(0x5EA78527)
 I (..\4UserLayer\stm32f4xx.h)(0x5D0B0488)
 I (..\1McuLayer\CMSIS\core_cm4.h)(0x5D0B0488)
@@ -1616,6 +1730,46 @@ F (..\2LowLayer\SUART\UARTQueue.c)(0x5DB116A4)(--c99 -c --cpu Cortex-M4.fp -g -O
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
 I (..\2LowLayer\SUART\UARTQueue.h)(0x5DB116A4)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+F (..\2LowLayer\INFRARED\bsp_sensor.c)(0x5ECE3685)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\bsp_sensor.o --omf_browse ..\6bin\bsp_sensor.crf --depend ..\6bin\bsp_sensor.d)
+I (..\2LowLayer\INFRARED\bsp_sensor.h)(0x5ECB21FD)
+I (..\4UserLayer\stm32f4xx.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cm4.h)(0x5D0B0488)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (..\1McuLayer\CMSIS\core_cmInstr.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cmFunc.h)(0x5D0B0488)
+I (..\1McuLayer\CMSIS\core_cm4_simd.h)(0x5D0B0488)
+I (..\4UserLayer\system_stm32f4xx.h)(0x5D0B0488)
+I (..\4UserLayer\stm32f4xx_conf.h)(0x5D1B056F)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5D0B0488)
+I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5D0B0488)
+I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
+I (..\4UserLayer\Apps\tool.h)(0x5EE33924)
+I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 F (..\1McuLayer\STM32F4xx_StdPeriph_Driver\src\misc.c)(0x5D0B0488)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\1McuLayer\CMSIS -I ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc -I ..\2LowLayer\LED -I ..\3MiddleLayer\delay -I ..\3MiddleLayer\sys -I ..\2LowLayer\USART -I ..\4UserLayer -I ..\5FreeRTOS\include -I ..\5FreeRTOS\portable\RVDS\ARM_CM4F -I ..\2LowLayer\FLASH -I ..\2LowLayer\KEY -I ..\3MiddleLayer\easyflash\inc -I ..\2LowLayer\TIME -I ..\2LowLayer\FLASH\inc -I ..\3MiddleLayer\ini -I ..\3MiddleLayer\stmflash -I ..\3MiddleLayer\ymodem -I ..\3MiddleLayer\cjson -I ..\3MiddleLayer\malloc -I ..\3MiddleLayer\easylogger\inc -I ..\2LowLayer\BEEP -I ..\2LowLayer\INFRARED -I ..\2LowLayer\DigitalTube -I ..\2LowLayer\BSP -I ..\2LowLayer\WDG -I ..\2LowLayer\READER -I ..\2LowLayer\SUART -I ..\4UserLayer\Apps -I ..\4UserLayer\Task-I.\RTE\_SwingDoorApp-Id:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\6bin\misc.o --omf_browse ..\6bin\misc.crf --depend ..\6bin\misc.d)
 I (..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5D0B0488)
 I (..\4UserLayer\stm32f4xx.h)(0x5D0B0488)

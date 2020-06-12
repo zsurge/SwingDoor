@@ -22,13 +22,15 @@
  *----------------------------------------------*/
 #include "Sensor_Task.h"
 #include "bsp_infrared.h"
+#include "bsp_sensor.h"
 #include "comm.h"
+#include "string.h"
 
 /*----------------------------------------------*
  * 宏定义                                       *
  *----------------------------------------------*/
 #define SENSOR_TASK_PRIO		(tskIDLE_PRIORITY + 2)
-#define SENSOR_STK_SIZE 		(configMINIMAL_STACK_SIZE*8)
+#define SENSOR_STK_SIZE 		(configMINIMAL_STACK_SIZE*4)
 
 /*----------------------------------------------*
  * 常量定义                                     *
@@ -61,11 +63,11 @@ void CreateSensorTask(void)
 static void vTaskSensor(void *pvParameters)
 {
     uint32_t code = 0;
-    uint8_t dat[3] = {0};
+    uint8_t dat[3+1] = {0};
     
     while(1)
     {  
-        code = bsp_infrared_scan();       
+        code = bsp_sensor_scan();//bsp_infrared_scan();       
 
         if(code != ERR_INFRARED)
         {

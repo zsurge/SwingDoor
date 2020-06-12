@@ -62,6 +62,7 @@
 ..\6bin\led_task.o: ..\2LowLayer\INFRARED\bsp_infrared.h
 ..\6bin\led_task.o: ..\3MiddleLayer\delay\delay.h
 ..\6bin\led_task.o: ..\4UserLayer\Apps\errorcode.h
+..\6bin\led_task.o: ..\2LowLayer\INFRARED\bsp_sensor.h
 ..\6bin\led_task.o: ..\2LowLayer\BEEP\bsp_beep.h
 ..\6bin\led_task.o: ..\2LowLayer\USART\bsp_uart_fifo.h
 ..\6bin\led_task.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

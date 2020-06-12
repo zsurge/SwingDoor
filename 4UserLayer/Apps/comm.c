@@ -266,14 +266,14 @@ SYSERRORCODE_E send_to_host(uint8_t cmd,uint8_t *buf,uint8_t len)
 
     memset(tmpBuf,0x00,sizeof(tmpBuf));
     memset(TxdBuf,0x00,sizeof(TxdBuf));
-    memset(&cmd_tx,0x00,sizeof(cmd_tx));
-
+    memset(&cmd_tx,0x00,sizeof(CMD_TX_T)); 
+    
     i = 3;
     TxdBuf[0] = STX;
     cmd_tx.cmd = cmd;
     cmd_tx.code = 0;
     
-    bcd2asc(cmd_tx.data, buf, len*2, 0);        
+    bcd2asc(cmd_tx.data, buf, len*2, 1); 
     json_len = packetJSON(&cmd_tx,tmpBuf);  
     if(json_len == 0)
     {        
@@ -357,7 +357,7 @@ static SYSERRORCODE_E parseJSON(uint8_t *text,CMD_RX_T *cmd_rx)
 
     strcpy((char *)asc_dat,(char *)tmpCmd);
     
-    asc2bcd(bcd_cmd, asc_dat, strlen((const char*)asc_dat), 0);
+    asc2bcd(bcd_cmd, asc_dat, strlen((const char*)asc_dat), 1); 
 
     //目前指令只有1byte 所以直接赋值
     cmd_rx->cmd = bcd_cmd[0];
@@ -373,8 +373,9 @@ static SYSERRORCODE_E parseJSON(uint8_t *text,CMD_RX_T *cmd_rx)
         {
             asc_len += 1;
         }
-        asc2bcd(bcd_dat,tmpdat,asc_len,0);
+        asc2bcd(bcd_dat,tmpdat,asc_len,1);
         memcpy(cmd_rx->cmd_data,bcd_dat,asc_len/2);
+        cmd_rx->len = asc_len/2;
     }
     
 
@@ -531,7 +532,8 @@ void send_to_device(CMD_RX_T *cmd_rx)
             TxdBuf[0] = STX;            
             cmd_tx.cmd = GETSENSOR;
             cmd_tx.code = 0x00;
-            bsp_GetSensorStatus(cmd_tx.data);      
+            //bsp_GetSensorStatus(cmd_tx.data);      
+            bsp_GetSensorValue(cmd_tx.data);
             i += packetJSON(&cmd_tx,tmpBuf);            
             memcpy(TxdBuf+3,tmpBuf,i-3); 
             TxdBuf[i++] = ETX;  
@@ -565,17 +567,12 @@ void send_to_device(CMD_RX_T *cmd_rx)
                                  (uint32_t)&cmd_rx->cmd_data,
                                  eSetValueWithOverwrite );/*覆盖当前通知*/
           
-          if( xReturn == pdPASS )
-          {
-//            dbh("Set LED Send", (char *)cmd_rx->cmd_data, MAX_EXLED_LEN);
-          }
-          else
-          {
-            SendAsciiCodeToHost(ERRORINFO,COMM_SEND_ERR,"set led error,try again");
-            DBG("Set LED Send Error!\r\n");
-            dbh("Set LED Send Error", (char *)cmd_rx->cmd_data, MAX_EXLED_LEN);                
-          }
-
+            if( xReturn != pdPASS )
+            {
+                SendAsciiCodeToHost(ERRORINFO,COMM_SEND_ERR,"set led error,try again");
+                DBG("Set LED Send Error!\r\n");
+                dbh("Set LED Send Error", (char *)cmd_rx->cmd_data, MAX_EXLED_LEN);                
+            }
             
             break;                        
         case GETDEVICEINFO://获取设备信息

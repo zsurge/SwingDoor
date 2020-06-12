@@ -64,3 +64,4 @@
 ..\6bin\handshake_task.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 ..\6bin\handshake_task.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
 ..\6bin\handshake_task.o: ..\4UserLayer\Apps\errorcode.h
+..\6bin\handshake_task.o: ..\2LowLayer\INFRARED\bsp_sensor.h

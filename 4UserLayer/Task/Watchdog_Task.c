@@ -20,12 +20,14 @@
  * 包含头文件                                   *
  *----------------------------------------------*/
 #include "Watchdog_Task.h"
+#include "bsp_iwdg.h"
 #include "tool.h"
+
 /*----------------------------------------------*
  * 宏定义                                       *
  *----------------------------------------------*/
 #define WATCHDOG_TASK_PRIO		( tskIDLE_PRIORITY + 5)
-#define WATCHDOG_STK_SIZE 		(configMINIMAL_STACK_SIZE*8)
+#define WATCHDOG_STK_SIZE 		(configMINIMAL_STACK_SIZE*2)
 
 /*----------------------------------------------*
  * 常量定义                                     *

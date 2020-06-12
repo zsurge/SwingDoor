@@ -25,20 +25,20 @@
 /*----------------------------------------------*
  * 宏定义                                       *
  *----------------------------------------------*/
-#define APPCREATE_TASK_PRIO		(tskIDLE_PRIORITY)
-#define APPCREATE_STK_SIZE 		(configMINIMAL_STACK_SIZE*16)
+//#define APPCREATE_TASK_PRIO		(tskIDLE_PRIORITY)
+//#define APPCREATE_STK_SIZE 		(configMINIMAL_STACK_SIZE*16)
     
 
 
 /*----------------------------------------------*
  * 常量定义                                     *
  *----------------------------------------------*/
-const char *AppCreateTaskName = "vAppCreateTask";      
+//const char *AppCreateTaskName = "vAppCreateTask";      
 
 /*----------------------------------------------*
  * 模块级变量                                   *
  *----------------------------------------------*/
-static TaskHandle_t xHandleTaskAppCreate = NULL;     
+//static TaskHandle_t xHandleTaskAppCreate = NULL;     
 
 SemaphoreHandle_t gxMutex = NULL;
 EventGroupHandle_t xCreatedEventGroup = NULL;
@@ -99,6 +99,8 @@ static void AppTaskCreate (void)
     
     //电机控制处理
     CreateMotorCtrlTask();
+    //监控任务
+    CreateMonitorTask();
 
     //方向指示灯
     CreateLedTask();

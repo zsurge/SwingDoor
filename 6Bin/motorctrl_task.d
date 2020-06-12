@@ -63,3 +63,5 @@
 ..\6bin\motorctrl_task.o: ..\3MiddleLayer\delay\delay.h
 ..\6bin\motorctrl_task.o: ..\3MiddleLayer\sys\sys.h
 ..\6bin\motorctrl_task.o: ..\4UserLayer\Apps\errorcode.h
+..\6bin\motorctrl_task.o: ..\2LowLayer\INFRARED\bsp_sensor.h
+..\6bin\motorctrl_task.o: ..\4UserLayer\Task\Monitor_Task.h

@@ -55,3 +55,4 @@
 ..\6bin\errorcode.o: ..\2LowLayer\INFRARED\bsp_infrared.h
 ..\6bin\errorcode.o: ..\3MiddleLayer\delay\delay.h
 ..\6bin\errorcode.o: ..\3MiddleLayer\sys\sys.h
+..\6bin\errorcode.o: ..\2LowLayer\INFRARED\bsp_sensor.h

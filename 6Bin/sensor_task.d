@@ -55,9 +55,11 @@
 ..\6bin\sensor_task.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h
 ..\6bin\sensor_task.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 ..\6bin\sensor_task.o: ..\1McuLayer\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
+..\6bin\sensor_task.o: ..\2LowLayer\INFRARED\bsp_sensor.h
 ..\6bin\sensor_task.o: ..\4UserLayer\Apps\comm.h
 ..\6bin\sensor_task.o: ..\4UserLayer\Apps\tool.h
 ..\6bin\sensor_task.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\6bin\sensor_task.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\6bin\sensor_task.o: ..\3MiddleLayer\cjson\cJSON.h
 ..\6bin\sensor_task.o: ..\4UserLayer\Apps\errorcode.h
+..\6bin\sensor_task.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

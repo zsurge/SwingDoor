@@ -50,6 +50,22 @@ TaskHandle_t xHandleTaskLed = NULL;      //LED灯
  * 内部函数原型说明                             *
  *----------------------------------------------*/
 static void vTaskLed(void *pvParameters);
+static void showTask ( void );
+
+static void showTask ( void )
+{
+	uint8_t pcWriteBuffer[1024] = {0};
+
+	printf ( "=================================================\r\n" );
+	printf ( "任务名      任务状态 优先级   剩余栈 任务序号\r\n" );
+	vTaskList ( ( char* ) &pcWriteBuffer );
+	printf ( "%s\r\n", pcWriteBuffer );
+
+	printf ( "\r\n任务名       运行计数         使用率\r\n" );
+	vTaskGetRunTimeStats ( ( char* ) &pcWriteBuffer );
+	printf ( "%s\r\n", pcWriteBuffer );
+	printf ( "当前动态内存剩余大小 = %d字节\r\n", xPortGetFreeHeapSize() );
+}
 
 void CreateLedTask(void)
 {
@@ -70,9 +86,9 @@ static void vTaskLed(void *pvParameters)
 //    uint8_t pcWriteBuffer[1024];
     uint8_t tmp[15] = {0x00};
     BaseType_t xReturn = pdTRUE;/* 定义一个创建信息返回值，默认为pdPASS */
-    const TickType_t xMaxBlockTime = pdMS_TO_TICKS(1000); /* 设置最大等待时间为1000ms */  
+    const TickType_t xMaxBlockTime = pdMS_TO_TICKS(50); /* 设置最大等待时间为1000ms */  
     char *recvbuff;
-    uint8_t i = 0;
+    uint16_t i = 0;
 
     
     BEEP = 0;
@@ -88,23 +104,16 @@ static void vTaskLed(void *pvParameters)
         else
         {
             LED3 = 0;
-        }
-        
-        if(Motro_B == 1)
-        {
-          LED2=!LED2;   
-        }
-        else
-        {
-            LED2 = 0;
-        }    
+        }        
+   
 
         //系统状态运行灯，每500ms 一次
         i++;
-        if(i == 5)
+        if(i == 10)
         {
             i = 0;
             LED4=!LED4; 
+//            showTask();
         }
 
         //获取任务通知，等待1000个时间节拍，获取到，则执行上位机指令，获取不到，则执行状态查询
