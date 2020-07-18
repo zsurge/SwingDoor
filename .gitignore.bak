@@ -1,5 +1,5 @@
 #忽略SI目录
-/SwingDoorApp/SwingDoorApp.si4project/*
+/SwingDoorApp/SwingDoorApp.si4project
 
 #忽略BIN下所有文件
 /SwingDoorApp/6Bin/*

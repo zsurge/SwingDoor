@@ -91,34 +91,20 @@ static void vTaskMonitor(void *pvParameters)
 
         //这里需要判定红外的值，来确定是正向开门或者反向开门
 
-//        if(buf[2] != 0 && buf[1]== 0)
-//        {
-//            printf("waring!!! open door\r\n");
-//            RS485_SendBuf(COM4, ReverseOpenDoor,sizeof(ReverseOpenDoor));//进口防夹，反向打开A电机
-//            vTaskSuspend(xHandleTaskMonitor);     
-//        }
-
-//        if(buf[1] != 0 && buf[2] == 0)
-//        {
-//            printf("waring!!! open door\r\n");
-//            RS485_SendBuf(COM4, OpenDoor,sizeof(OpenDoor));//出口防夹，正向打开A电机
-//            vTaskSuspend(xHandleTaskMonitor);        
-//        }      
-
-
-        if(buf[2] != 0)
+        if(buf[2] != 0 && buf[1]== 0)
         {
             printf("waring!!! open door\r\n");
             RS485_SendBuf(COM4, ReverseOpenDoor,sizeof(ReverseOpenDoor));//进口防夹，反向打开A电机
             vTaskSuspend(xHandleTaskMonitor);     
         }
 
-        if(buf[1] != 0)
+        if(buf[1] != 0 && buf[2] == 0)
         {
             printf("waring!!! open door\r\n");
             RS485_SendBuf(COM4, OpenDoor,sizeof(OpenDoor));//出口防夹，正向打开A电机
             vTaskSuspend(xHandleTaskMonitor);        
-        } 
+        }       
+
         
         vTaskDelay(10);
         
