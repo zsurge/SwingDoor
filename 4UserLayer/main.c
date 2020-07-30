@@ -100,7 +100,7 @@ static void AppTaskCreate (void)
     //电机控制处理
     CreateMotorCtrlTask();
     //监控任务
-    CreateMonitorTask();
+//    CreateMonitorTask();
 
     //方向指示灯
     CreateLedTask();

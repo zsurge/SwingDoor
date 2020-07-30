@@ -1,0 +1,37 @@
+---- gRecvHost Matches (56 in 2 files) ----
+comm.c (4UserLayer\Apps) line 51 : RECVHOST_T gRecvHost;
+init_serial_boot in comm.c (4UserLayer\Apps) :     memset(&gRecvHost,0x00,sizeof(gRecvHost));
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :         switch (gRecvHost.RxdStatus)
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                 gRecvHost.RxdStatus = SPACE;
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                     gRecvHost.RxdBuf[0] = ch;
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                     gRecvHost.NowLen = 1;
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                     gRecvHost.RxdStatus = 20;
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                     gRecvHost.RxdStatus = 21;
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                 gRecvHost.RxdBuf[gRecvHost.NowLen++] = ch; //ETX
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                 crc_value = CRC16_Modbus((uint8_t *)gRecvHost.RxdBuf, gRecvHost.NowLen);                
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                 gRecvHost.RxCRCHi = crc_value>>8;
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                 gRecvHost.RxCRCLo = crc_value & 0xFF;                
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                 gRecvHost.RxdStatus = 22;
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                 gRecvHost.RxdBuf[gRecvHost.NowLen++] = ch; //CRCHI
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                 gRecvHost.RxdBuf[gRecvHost.NowLen++] = ch; //CRCLO
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                 if(gRecvHost.RxdBuf[gRecvHost.NowLen-2] == gRecvHost.RxCRCHi && \
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                     gRecvHost.RxdBuf[gRecvHost.NowLen-1] == gRecvHost.RxCRCLo )
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                     gRecvHost.RxdTotalLen = gRecvHost.NowLen;
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                     gRecvHost.RxdFrameStatus = FINISH;                    
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                     gRecvHost.RxdStatus = 0;
+deal_Serial_Parse in comm.c (4UserLayer\Apps) : //                    dbh("recv finish",(char *)gRecvHost.RxdBuf,gRecvHost.RxdTotalLen);
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                     gRecvHost.RxdFrameStatus = FINISH;
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                     gRecvHost.RxdBuf[gRecvHost.NowLen++] = ch;
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                     gRecvHost.RxdStatus = 20;
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                     DBG("CRC check error,The correct value should be:HI=%02x,LO=%02x\r\n",gRecvHost.RxCRCHi,gRecvHost.RxCRCLo);
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                 if (gRecvHost.RxdFrameStatus == SPACE) 
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                     gRecvHost.RxdFrameStatus = FINISH;
+deal_Serial_Parse in comm.c (4UserLayer\Apps) :                     gRecvHost.RxdStatus = 0;
+deal_rx_data in comm.c (4UserLayer\Apps) :     if (FINISH == gRecvHost.RxdFrameStatus)
+deal_rx_data in comm.c (4UserLayer\Apps) :         if(gRecvHost.RxdBuf[0] == STX && gRecvHost.RxdBuf[gRecvHost.RxdTotalLen -3] == ETX)                                   //解析02数据包
+deal_rx_data in comm.c (4UserLayer\Apps) : //            dbh("recv deal_rx_data",(char *)gRecvHost.RxdBuf,gRecvHost.RxdTotalLen);
+deal_rx_data in comm.c (4UserLayer\Apps) :             if ((bccHi == gRecvHost.RxdBuf[gRecvHost.RxdTotalLen -2]) && \
+deal_rx_data in comm.c (4UserLayer\Apps) :                 (bccLo == gRecvHost.RxdBuf[gRecvHost.RxdTotalLen -1]))
+deal_rx_data in comm.c (4UserLayer\Apps) :                 memcpy(json_buf,(const char*)gRecvHost.RxdBuf+1,gRecvHost.RxdTotalLen-4);
+deal_rx_data in comm.c (4UserLayer\Apps) :                 dbh("CRC ERROR RxdBuf", (char *)gRecvHost.RxdBuf, gRecvHost.RxdTotalLen);
+comm.h (4UserLayer\Apps) line 117 : static RECVHOST_T gRecvHost;

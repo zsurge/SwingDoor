@@ -382,13 +382,11 @@ static SYSERRORCODE_E parseJSON(uint8_t *text,CMD_RX_T *cmd_rx)
     cJSON_Delete(root);
 
     my_free(cmd);
-    my_free(tmpCmd);
     my_free(tmpdat);
     
     return result;
 
 }
-
 
 
 static uint16_t  packetJSON(CMD_TX_T *cmd_tx,uint8_t *command_data)

@@ -64,3 +64,4 @@
 ..\6bin\monitor_task.o: ..\2LowLayer\INFRARED\bsp_sensor.h
 ..\6bin\monitor_task.o: ..\2LowLayer\USART\bsp_uart_fifo.h
 ..\6bin\monitor_task.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\6bin\monitor_task.o: ..\2LowLayer\BEEP\bsp_beep.h

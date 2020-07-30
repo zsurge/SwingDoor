@@ -83,7 +83,7 @@ int fgetc(FILE *f)
 #if 1	/* 从串口接收FIFO中取1个数据, 只有取到数据才返回 */
 	uint8_t ucData;
 
-	while(comGetChar(COM6, &ucData) == 0);
+	while(comGetChar(COM2, &ucData) == 0);
 
 	return ucData;
 #else

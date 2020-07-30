@@ -102,18 +102,14 @@ static void vTaskMotorCtrl(void *pvParameters)
             RS485_SendBuf(COM4, ptMotor->data,MOTORCTRL_QUEUE_BUF_LEN);//操作A电机  
 
             //判定是否是关门指令
-            if(memcmp(ptMotor->data,CloseDoor,MOTORCTRL_QUEUE_BUF_LEN) == 0)
-            {                
-                printf("the door is closing,enable monitor task\r\n");
-                NotifyValue = 0x55;
-//                //发送通知，启用监控任务
-//                xReturn = xTaskNotify( xHandleTaskMonitor, /*任务句柄*/
-//                                     NotifyValue, /* 发送的数据，最大为4字节 */
-//                                     eSetValueWithOverwrite );/*覆盖当前通知*/
+//            if(memcmp(ptMotor->data,CloseDoor,MOTORCTRL_QUEUE_BUF_LEN) == 0)
+//            {                
+//                printf("the door is closing,enable monitor task\r\n");
+//                NotifyValue = 0x55;
 
-                vTaskResume(xHandleTaskMonitor);
-            
-            }
+//                vTaskResume(xHandleTaskMonitor);
+//            
+//            }
         
         }
         else
@@ -139,17 +135,13 @@ static void vTaskMotorCtrl(void *pvParameters)
                 Motro_A = 0;
 
                 //这里判定是否是关到位,0x08代表电机关到位
-                if(buf[3] == 0x08 && NotifyValue == 0x55)
-                {
-                    //置信号量，停用监控任务
-                    printf("the door is closed,disable monitor task\r\n");
-                    NotifyValue = 0xAA;
-//                    //发送通知，启用监控任务
-//                    xReturn = xTaskNotify( xHandleTaskMonitor, /*任务句柄*/
-//                                         NotifyValue, /* 发送的数据，最大为4字节 */
-//                                         eSetValueWithOverwrite );/*覆盖当前通知*/
-                    vTaskSuspend(xHandleTaskMonitor); 
-                }
+//                if(buf[3] == 0x08 && NotifyValue == 0x55)
+//                {
+//                    //置信号量，停用监控任务
+//                    printf("the door is closed,disable monitor task\r\n");
+//                    NotifyValue = 0xAA;
+//                    vTaskSuspend(xHandleTaskMonitor); 
+//                }
                 
             }
         } 

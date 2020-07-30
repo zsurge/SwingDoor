@@ -39,9 +39,9 @@ void Sound(u16 frq)
 }
 void Sound2(u16 time)
 {
-    BEEP = 1;
-    delay_ms(time);
     BEEP = 0;
+    delay_ms(time);
+    BEEP = 1;
     delay_ms(time);
 }
 void play_successful(void)
